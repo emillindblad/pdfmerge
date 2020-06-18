@@ -1,6 +1,4 @@
-require 'bundler'
-Bundler.require
-
+require 'combine_pdf'
 def main()
     input = ARGV
     p ARGV
@@ -8,7 +6,7 @@ def main()
     ARGV.each do |file|
         pdf << CombinePDF.load(file)
     end
-    pdf.save "out.pdf"
+    pdf.save "assets/pdf/out.pdf"
 end 
 
 main()

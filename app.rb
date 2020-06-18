@@ -5,6 +5,8 @@ get('/') do
 end
 
 post('/merge') do
-    byebug
     # p params
+    res = "I received the following files:\n"
+    res << params['pdffiles'].map{|f| f[:filename] }.join("\n")
+    res
 end
