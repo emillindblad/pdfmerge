@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+html lang="en"
+    head
+        meta charset="UTF-8"/
+        meta name="viewport" content="width=device-width, initial-scale=1.0"/
+        title PDF Merger
+    body
+        h1 Kombinera PDF!
+        form action="/merge" method="POST" enctype="multipart/form-data"
+            p Välj dina filer:
+            <input type="file" name="PDFfiles" accept="application/pdf" multiple>
+            p
+            input type="submit" value="Kombinera"
