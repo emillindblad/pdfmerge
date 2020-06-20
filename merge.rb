@@ -1,12 +1,11 @@
-require 'combine_pdf'
-def main()
-    input = ARGV
-    p ARGV
-    pdf = CombinePDF.new
-    ARGV.each do |file|
-        pdf << CombinePDF.load(file)
+module Pdf
+    def self.create(params)
+      savepath = "public/pdf/out.pdf"
+        pdf = CombinePDF.new
+        params[:pdffiles].each do |file|
+            readfile = IO.read file[:tempfile]
+            pdf << CombinePDF.parse(readfile)
+        end
+        pdf.save "#{savepath}"
     end
-    pdf.save "assets/pdf/out.pdf"
-end 
-
-main()
+end
