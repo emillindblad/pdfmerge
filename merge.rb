@@ -6,6 +6,8 @@ module Pdf
             readfile = IO.read file[:tempfile]
             pdf << CombinePDF.parse(readfile)
         end
-        pdf.save "#{savepath}"
+        temp_file = Tempfile.new(["out", '.pdf'], :encoding => 'ascii-8bit')
+        pdf.save(temp_file)
+        return temp_file
     end
 end

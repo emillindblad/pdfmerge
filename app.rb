@@ -8,7 +8,10 @@ get('/') do
     slim(:index)
 end
 
+get('/*') do
+    slim(:index)
+end
 post('/merge') do
-    Pdf.create(params)
-    redirect('/pdf/out.pdf')
+    status 200
+    body Pdf.create(params)
 end
