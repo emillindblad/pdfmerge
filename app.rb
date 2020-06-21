@@ -8,10 +8,8 @@ get('/') do
     slim(:index)
 end
 
-get('/*') do
-    slim(:index)
-end
 post('/merge') do
     status 200
+    headers 'content-type' => "application/pdf"
     body Pdf.create(params)
 end
