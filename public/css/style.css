@@ -30,7 +30,7 @@ body {
 }
 
 form {
-    border-right: 1px solid #ecf2ff;
+    border-right: 1px solid #555;
     display: flex;
     flex-direction: column;
     align-items: center;
