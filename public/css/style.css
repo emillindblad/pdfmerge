@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #171717;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+.container {
+    background-color: #222222;
+    border-radius: 25px;
+    width: 1000px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+    display: flex;
+    padding: 40px 0 40px 0;
+}
+
+.form-control {
+    margin: 10px 0;
+    width: 100%;
+}
+
+form {
+    border-right: 1px solid #ecf2ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    flex: 1;
+}
+
+label {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input:not([type="submit"]) {
+    background-color: transparent;
+    border: 2px solid #5b73d8;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: #5b73d8;
+    border: 2px solid #5b73d8;
+    border-radius: 6px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.infotext {
+    flex: 1.5;
+    padding: 0 40px 0 40px;
+}
+
+.info {
+    position: relative;
+    padding-left: 30px;
+    margin: 40px 0;
+}
+
+.info i {
+    color: #5b73d8;
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+
+.info h3 {
+    margin: 0;
+}
+
+.info p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 5px 0;
+}

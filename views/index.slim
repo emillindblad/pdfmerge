@@ -3,11 +3,29 @@ html lang="en"
     head
         meta charset="UTF-8"/
         meta name="viewport" content="width=device-width, initial-scale=1.0"/
+        link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous"/
+        link rel="stylesheet" href="css/style.css"/
         title PDF Merger
     body
-        h1 Kombinera PDF!
-        form action="/merge" method="POST" enctype="multipart/form-data"
-            p Välj dina filer:
-            <input type="file" name="pdffiles[]" accept="application/pdf" multiple>
-            p
-            input type="submit" value="Kombinera"
+        .container
+            form action="/merge" method="POST" enctype="multipart/form-data"
+                / h3 Kombinera dina PDF filer!
+                div.form-control
+                    label for="file" Välj dina filer:
+                    <input type="file" name="pdffiles[]" accept="application/pdf" multiple>
+                input.btn type="submit" value="Kombinera"
+            div.infotext
+                div.info
+                    i class=["fa", "fa-sort-alpha-down"]
+                    h3 Förbered dina filer
+                    p Se till att ha döpt dina filer i den ordning du vill att de ska komma i dokumentet. Tex Sida1.pdf Sida2.pdf osv.
+                
+                div.info
+                    i class=["fa", "fa-upload"]
+                    h3 Kombinera PDF filer
+                    p Ladda upp dina pdf filer till höger för att kombinera dom till en fil.
+
+                div.info
+                    i class=["fa", "fa-file-pdf"]
+                    h3 Kombinerad fil
+                    p Din nya pdf fil öppnas automatiskt där du kan kolla igenom att allt stämmer och ladda ner den
