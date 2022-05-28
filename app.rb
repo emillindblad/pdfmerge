@@ -7,6 +7,10 @@ get('/') do
     slim(:index)
 end
 
+get('/keepalive') do
+    "Ah, ha, ha, ha, stayin' alive, stayin' alive."
+end
+
 post('/merge') do
     status 200
     headers 'content-type' => "application/pdf"
